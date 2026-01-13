@@ -202,7 +202,7 @@ export default function App() {
             <div className="mb-6 relative animate-float">
               <div className="w-40 h-40 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 p-1 shadow-2xl shadow-purple-500/50 animate-glow">
                 <img 
-                  src="https://api.dicebear.com/7.x/avataaars/svg?seed=Simran" 
+                  src="https://dhankarsimran.github.io/portfolio/profile-photo.jpg" 
                   alt="Simran Dhankar" 
                   className="w-full h-full rounded-full object-cover bg-slate-800"
                 />
@@ -229,7 +229,7 @@ export default function App() {
                 Get In Touch
               </a>
               <a 
-                href={`${import.meta.env.BASE_URL}Simran_Dhankar_Resume.pdf`}
+                href="https://dhankarsimran.github.io/portfolio/Simran_Dhankar_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 px-8 py-4 rounded-full transition-all transform hover:scale-110 hover:shadow-lg hover:shadow-green-500/50"
@@ -533,7 +533,7 @@ export default function App() {
               simrandhankar3@gmail.com
             </a>
             <a 
-              href={`${import.meta.env.BASE_URL}Simran_Dhankar_Resume.pdf`}
+              href="https://dhankarsimran.github.io/portfolio/Simran_Dhankar_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 px-10 py-5 rounded-2xl transition-all transform hover:scale-110 text-lg shadow-lg hover:shadow-green-500/50"
