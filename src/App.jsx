@@ -228,7 +228,12 @@ export default function App() {
                 <Mail size={20} className="group-hover:animate-bounce" />
                 Get In Touch
               </a>
-              <a href="#" onClick={(e) => { e.preventDefault(); window.open('/Simran_Dhankar_Resume.pdf', '_blank'); }} className="flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 px-8 py-4 rounded-full transition-all transform hover:scale-110 hover:shadow-lg hover:shadow-green-500/50">
+              <a 
+                href={`${import.meta.env.BASE_URL}Simran_Dhankar_Resume.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 px-8 py-4 rounded-full transition-all transform hover:scale-110 hover:shadow-lg hover:shadow-green-500/50"
+              >
                 <Download size={20} />
                 Resume
               </a>
@@ -527,7 +532,12 @@ export default function App() {
               <Mail size={24} className="group-hover:animate-bounce" />
               simrandhankar3@gmail.com
             </a>
-            <a href="#" onClick={(e) => { e.preventDefault(); window.open('/Simran_Dhankar_Resume.pdf', '_blank'); }} className="group flex items-center gap-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 px-10 py-5 rounded-2xl transition-all transform hover:scale-110 text-lg shadow-lg hover:shadow-green-500/50">
+            <a 
+              href={`${import.meta.env.BASE_URL}Simran_Dhankar_Resume.pdf`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 px-10 py-5 rounded-2xl transition-all transform hover:scale-110 text-lg shadow-lg hover:shadow-green-500/50"
+            >
               <Download size={24} className="group-hover:animate-bounce" />
               Download Resume
             </a>
