@@ -202,7 +202,7 @@ export default function App() {
             <div className="mb-6 relative animate-float">
               <div className="w-40 h-40 rounded-full bg-gradient-to-br from-purple-500 via-pink-500 to-blue-500 p-1 shadow-2xl shadow-purple-500/50 animate-glow">
                 <img 
-                  src="https://dhankarsimran.github.io/portfolio/profile-photo.jpg" 
+                  src="https://dhankarsimran.github.io/portfolio/profile-photo.JPG" 
                   alt="Simran Dhankar" 
                   className="w-full h-full rounded-full object-cover bg-slate-800"
                 />
