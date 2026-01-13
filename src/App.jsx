@@ -172,66 +172,8 @@ export default function App() {
       </div>
 
       {/* Navigation */}
-      <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-          scrolled
-            ? 'bg-slate-950/80 backdrop-blur-lg shadow-lg shadow-purple-500/10'
-            : ''
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-
-          {/* Logo */}
-          <button
-            onClick={() => {
-              document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-              setActiveSection('about');
-              setMenuOpen(false);
-            }}
-            className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
-          >
-            SD
-          </button>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-6">
-            {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
-              <button
-                key={item}
-                onClick={() => {
-                  document
-                    .getElementById(item.toLowerCase())
-                    ?.scrollIntoView({ behavior: 'smooth' });
-                  setActiveSection(item.toLowerCase());
-                }}
-                className={`hover:text-purple-400 transition-all duration-300 relative ${
-                  activeSection === item.toLowerCase()
-                    ? 'text-purple-400'
-                    : 'text-gray-300'
-                }`}
-              >
-                {item}
-                {activeSection === item.toLowerCase() && (
-                  <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-400 to-pink-400"></span>
-                )}
-              </button>
-            ))}
-          </div>
-
-          {/* Hamburger Button */}
-          <button
-            className="md:hidden text-purple-400 z-50"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <div className="space-y-1">
-              <span className="block w-6 h-0.5 bg-purple-400"></span>
-              <span className="block w-6 h-0.5 bg-purple-400"></span>
-              <span className="block w-6 h-0.5 bg-purple-400"></span>
-            </div>
-          </button>
-        </div>
-
-        {/* Mobile Overlay */}
+      <>
+        {/* Mobile Overlay — MUST be outside nav */}
         {menuOpen && (
           <div
             className="fixed inset-0 z-40 bg-black/40 md:hidden"
@@ -239,35 +181,96 @@ export default function App() {
           />
         )}
 
-        {/* Mobile Slide Menu */}
-        <div
-          className={`md:hidden fixed top-0 right-0 h-screen w-64 bg-slate-950/95 backdrop-blur-lg transform transition-transform duration-500 z-50 ${
-            menuOpen ? 'translate-x-0' : 'translate-x-full'
+        <nav
+          className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+            scrolled
+              ? 'bg-slate-950/80 backdrop-blur-lg shadow-lg shadow-purple-500/10'
+              : ''
           }`}
         >
-          <div className="flex flex-col gap-8 px-8 pt-24">
-            {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
-              <button
-                key={item}
-                onClick={() => {
-                  document
-                    .getElementById(item.toLowerCase())
-                    ?.scrollIntoView({ behavior: 'smooth' });
-                  setActiveSection(item.toLowerCase());
-                  setMenuOpen(false);
-                }}
-                className={`text-left text-lg transition-all ${
-                  activeSection === item.toLowerCase()
-                    ? 'text-purple-400'
-                    : 'text-gray-300'
-                }`}
-              >
-                {item}
-              </button>
-            ))}
+          <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+            {/* Logo */}
+            <button
+              onClick={() => {
+                document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+                setActiveSection('about');
+                setMenuOpen(false);
+              }}
+              className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"
+            >
+              SD
+            </button>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex gap-6">
+              {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
+                <button
+                  key={item}
+                  onClick={() => {
+                    document
+                      .getElementById(item.toLowerCase())
+                      ?.scrollIntoView({ behavior: 'smooth' });
+                    setActiveSection(item.toLowerCase());
+                  }}
+                  className={`hover:text-purple-400 transition-all duration-300 relative ${
+                    activeSection === item.toLowerCase()
+                      ? 'text-purple-400'
+                      : 'text-gray-300'
+                  }`}
+                >
+                  {item}
+                  {activeSection === item.toLowerCase() && (
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-purple-400 to-pink-400"></span>
+                  )}
+                </button>
+              ))}
+            </div>
+
+            {/* Hamburger Button */}
+            <button
+              className="md:hidden text-purple-400 z-50"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <div className="space-y-1">
+                <span className="block w-6 h-0.5 bg-purple-400"></span>
+                <span className="block w-6 h-0.5 bg-purple-400"></span>
+                <span className="block w-6 h-0.5 bg-purple-400"></span>
+              </div>
+            </button>
           </div>
-        </div>
-      </nav>
+
+          {/* Mobile Slide Menu */}
+          <div
+            className={`md:hidden fixed top-0 right-0 h-screen w-64 bg-slate-950/95 backdrop-blur-lg transform transition-transform duration-500 z-50 ${
+              menuOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}
+          >
+            <div className="flex flex-col gap-8 px-8 pt-24">
+              {['About', 'Experience', 'Projects', 'Skills', 'Contact'].map((item) => (
+                <button
+                  key={item}
+                  onClick={() => {
+                    document
+                      .getElementById(item.toLowerCase())
+                      ?.scrollIntoView({ behavior: 'smooth' });
+                    setActiveSection(item.toLowerCase());
+                    setMenuOpen(false);
+                  }}
+                  className={`text-left text-lg transition-all ${
+                    activeSection === item.toLowerCase()
+                      ? 'text-purple-400'
+                      : 'text-gray-300'
+                  }`}
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
+          </div>
+        </nav>
+      </>
+
 
       {/* Hero Section */}
       <section id="about" className="relative pt-32 pb-20 px-6 min-h-screen flex items-center">
