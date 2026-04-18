@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Github, Linkedin, Mail, Phone, MapPin, Code, Database, Brain, TrendingUp, Award, Briefcase, GraduationCap, Sparkles, Zap, Cpu, Cloud, BarChart3, Terminal, Download } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, MapPin, Code, Database, Brain, TrendingUp, Award, Briefcase, GraduationCap, Sparkles, Zap, Cpu, Cloud, BarChart3, Terminal, Download, BookOpen, Layers } from 'lucide-react';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('about');
@@ -37,49 +37,77 @@ export default function App() {
 
   const skillCategories = [
     {
-      icon: <Terminal className="text-blue-400" size={28} />,
-      title: 'Languages & Tools',
-      color: 'from-blue-500/20 to-indigo-500/20',
-      border: 'border-blue-500/30',
-      skills: ['Python', 'JavaScript', 'Java', 'R', 'SQL', 'Git', 'Postman', 'VS Code']
-    },
-    {
       icon: <Brain className="text-purple-400" size={28} />,
-      title: 'Data Science & ML',
+      title: 'ML & AI',
       color: 'from-purple-500/20 to-pink-500/20',
       border: 'border-purple-500/30',
-      skills: ['Python', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'NumPy', 'Pandas', 'NLP', 'Statistical Analysis']
+      skills: [
+        'PyTorch', 'TensorFlow', 'Scikit-learn', 'Keras',
+        'CNNs', 'RNNs', 'LSTMs', 'XGBoost', 'AdaBoost', 'Random Forest',
+        'Transformers (BERT, T5)', 'LangChain', 'LangGraph',
+        'Generative AI', 'LLMs', 'VLMs', 'RAG',
+        'Prompt Engineering', 'Pinecone', 'FAISS',
+        'Statistical Modeling', 'Predictive Modeling'
+      ]
     },
     {
       icon: <BarChart3 className="text-green-400" size={28} />,
-      title: 'Data Visualization',
+      title: 'Data & Analytics',
       color: 'from-green-500/20 to-emerald-500/20',
       border: 'border-green-500/30',
-      skills: ['Tableau', 'Power BI', 'Matplotlib', 'Seaborn', 'Data Wrangling']
+      skills: [
+        'Pandas', 'NumPy', 'PySpark',
+        'Hypothesis Testing', 'A/B Testing', 'Experimental Design',
+        'ANOVA', 'PCA', 'Causal Inference',
+        'ROC-AUC', 'SHAP', 'Regression', 'Classification', 'Clustering',
+        'Tableau', 'Matplotlib', 'Seaborn', 'Data Visualization'
+      ]
+    },
+    {
+      icon: <Terminal className="text-blue-400" size={28} />,
+      title: 'Languages & Frameworks',
+      color: 'from-blue-500/20 to-indigo-500/20',
+      border: 'border-blue-500/30',
+      skills: [
+        'Python', 'R', 'SQL', 'Java', 'JavaScript', 'TypeScript', 'Matlab',
+        'React.js', 'Node.js', 'Express.js', 'Next.js',
+        'MongoDB', 'REST APIs'
+      ]
     },
     {
       icon: <Cloud className="text-orange-400" size={28} />,
-      title: 'Big Data & Cloud',
+      title: 'Tools & Platforms',
       color: 'from-orange-500/20 to-red-500/20',
       border: 'border-orange-500/30',
-      skills: ['Apache Spark', 'Hadoop', 'Databricks', 'AWS', 'MongoDB', 'SQL']
+      skills: [
+        'AWS (EC2, S3)', 'Databricks', 'HuggingFace',
+        'Streamlit', 'Git', 'Unix/Linux',
+        'OpenAI', 'Anthropic Claude',
+        'Apache Spark', 'Hadoop', 'Postman', 'VS Code'
+      ]
     },
     {
       icon: <Code className="text-cyan-400" size={28} />,
       title: 'Full Stack Development',
       color: 'from-cyan-500/20 to-blue-500/20',
       border: 'border-cyan-500/30',
-      skills: ['React.js', 'Node.js', 'Next.js', 'Express.js', 'TypeScript', 'REST APIs']
+      skills: [
+        'React.js', 'Node.js', 'Next.js', 'Express.js',
+        'TypeScript', 'MongoDB', 'REST APIs',
+        'JWT Auth', 'Redis', 'AWS EC2/S3'
+      ]
     },
     {
       icon: <Cpu className="text-pink-400" size={28} />,
       title: 'CS Fundamentals',
       color: 'from-pink-500/20 to-rose-500/20',
       border: 'border-pink-500/30',
-      skills: ['Data Structures', 'Algorithms', 'OOP', 'Operating Systems', 'DBMS']
+      skills: [
+        'Data Structures', 'Algorithms', 'OOP',
+        'Operating Systems', 'DBMS', 'Computer Vision', 'NLP'
+      ]
     }
   ];
-
   const experiences = [
     {
       role: 'IT (Data Driven) Intern',
@@ -88,10 +116,10 @@ export default function App() {
       period: 'Dec 2024 – Jun 2025',
       color: 'purple',
       highlights: [
-        'Designed financial analysis tools processing 10K+ customer profiles with actionable retirement insights',
-        'Built scalable components using Python and JavaScript for cross-functional collaboration',
-        'Developed interactive Power BI and Tableau dashboards, improving decision speed by 20%',
-        'Conducted statistical portfolio analysis improving risk detection across 2K+ client portfolios'
+        'Architected an end-to-end financial analytics ML pipeline ingesting 50K+ transaction records daily, applying feature engineering and unsupervised anomaly detection to lift structured data quality from 72% to 94%, directly reducing downstream model errors.',
+        'Built a regression-based retirement forecasting model incorporating 20+ behavioral and financial features, reducing RMSE by 18% over baseline and improving long-range prediction stability for customer portfolio planning.',
+        'Implemented k-fold cross-validation, residual error diagnostics, and SHAP-based feature attribution to harden model generalization, cutting overfitting gap from 11% to 4% on held-out validation sets.',
+        'Automated data ingestion and model retraining pipeline using Python and SQL, reducing manual intervention by 60% and enabling weekly model refresh cycles with zero downtime.'
       ]
     },
     {
@@ -101,9 +129,9 @@ export default function App() {
       period: 'Mar 2024 – Jul 2024',
       color: 'blue',
       highlights: [
-        'Optimized large-scale ETL pipelines using Apache Spark (PySpark) and Hadoop, reducing processing time by 20%',
-        'Integrated Google Maps API for geospatial analytics, enriching 5K+ location records',
-        'Designed SQL queries and Python scripts, improving pipeline reliability by 30%'
+        'Engineered 15+ geospatial features from 5K+ location records using spatial joins and distance-based aggregations, boosting downstream customer targeting model precision by 30% (0.61 to 0.79 precision@k), directly improving customer experience optimization.,
+        'Conducted comprehensive EDA including outlier detection, missing-value imputation, and geo-cluster analysis, surfacing 3 high-value customer micro-segments previously invisible in raw data, adopted directly in GTM strategy.',
+        'Integrated Google Maps API with a Flask backend to enrich customer profiles with real-time POI and footfall data, improving address-level geocoding accuracy by 20% and reducing lookup latency by 35%'
       ]
     },
     {
@@ -113,14 +141,40 @@ export default function App() {
       period: 'Aug 2022 – Sep 2022',
       color: 'cyan',
       highlights: [
-        'Engineered a healthcare analytics platform with role-based authentication and AWS-hosted backend',
-        'Implemented predictive analytics on 50K+ patient records, improving diagnostic accuracy by 15%',
-        'Optimized backend queries and APIs, reducing system latency by 25%'
+        'Delivered a full-stack healthcare analytics platform (React, Node.js, Express, SQL, TypeScript) with JWT auth and role-based access control, deployed on AWS EC2/S3 and serving 500+ concurrent users.',
+        'Designed and optimized RESTful APIs with indexed SQL queries and Redis-layer caching, achieving a 40% reduction in average API response time (320ms to 192ms) under peak load.',
+        
       ]
     }
   ];
 
   const projects = [
+    {
+      title: 'StudyMate AI — RAG-Based Student Productivity Agent',
+      tech: 'Python, Streamlit, FAISS, Groq API, LLMs',
+      icon: <BookOpen className="text-emerald-400" size={32} />,
+      gradient: 'from-emerald-500 to-teal-500',
+      description: 'RAG-based AI agent for document Q&A, summarization, and personalized study planning using LLMs',
+      stats: [
+        { label: 'Relevance ↑', value: '30%' },
+        { label: 'Hallucinations ↓', value: '25%' },
+        { label: 'Queries', value: '50+' }
+      ],
+      link: 'https://studymate-ai-agent.streamlit.app/'
+    },
+    {
+      title: 'MoLoRAG — Multi-Modal Logic-Aware RAG System',
+      tech: 'VLMs, PyTorch, HuggingFace, BERT, T5',
+      icon: <Layers className="text-violet-400" size={32} />,
+      gradient: 'from-violet-500 to-purple-500',
+      description: 'Multi-modal RAG pipeline combining vision and text inputs for reasoning-aware generation',
+      stats: [
+        { label: 'MRR ↑', value: '12%' },
+        { label: 'Recall@5 ↑', value: '18%' },
+        { label: 'F1 vs GPT-3.5', value: '+8pts' }
+      ],
+      link: 'https://github.com/dhankarsimran/molorag'
+    },
     {
       title: 'Deepfake Detection System',
       tech: 'Python, PyTorch, CNN, OpenCV, Streamlit',
