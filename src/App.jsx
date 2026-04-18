@@ -110,7 +110,7 @@ export default function App() {
   ];
   const experiences = [
     {
-      role: 'IT (Data Driven) Intern',
+      role: 'ML Engineer Intern',
       company: 'Bajaj Capitals',
       location: 'Gurugram, India',
       period: 'Dec 2024 – Jun 2025',
@@ -343,14 +343,14 @@ export default function App() {
             <h1 className="text-7xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-slide-up">
               Simran Dhankar
             </h1>
-            <div className="overflow-hidden mb-4">
+            {/* <div className="overflow-hidden mb-4">
               <p className="text-3xl text-purple-300 mb-4 animate-slide-up" style={{animationDelay: '0.2s'}}>
                 Data Scientist & Software Engineer
               </p>
-            </div>
+            </div> */}
             <div className="overflow-hidden mb-8">
               <p className="text-gray-400 max-w-2xl text-lg animate-slide-up" style={{animationDelay: '0.4s'}}>
-                M.S. Data Science @ University of Washington | Transforming data into insights with machine learning, big data, and cloud technologies
+                M.S. Data Science @ University of Washington | Building AI-powered systems — from raw data to production-ready applications.
               </p>
             </div>
             
@@ -426,7 +426,7 @@ export default function App() {
                 </div>
                 <p className="text-gray-400 mb-4">Sep 2025 – Expected Jun 2027</p>
                 <div className="flex flex-wrap gap-2">
-                  {['Machine Learning', 'Deep Learning', 'NLP', 'Big Data'].map(course => (
+                  {['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Statistics', 'Probability', 'Linear Algebra', 'Data Visualization', 'Big Data'].map(course => (
                     <span key={course} className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm border border-purple-500/30">
                       {course}
                     </span>
@@ -447,7 +447,7 @@ export default function App() {
                 </div>
                 <p className="text-gray-400 mb-4">Dec 2020 – Jun 2024</p>
                 <div className="flex flex-wrap gap-2">
-                  {['Software Engineering', 'Data Structures', 'Algorithms', 'Databases'].map(course => (
+                  {['Software Engineering', 'Data Structures', 'Algorithms', 'Database Systems', 'Operating Systems', 'Object-oriented Programming'].map(course => (
                     <span key={course} className="bg-blue-600/20 text-blue-300 px-3 py-1 rounded-full text-sm border border-blue-500/30">
                       {course}
                     </span>
