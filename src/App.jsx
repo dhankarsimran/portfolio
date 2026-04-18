@@ -129,7 +129,7 @@ export default function App() {
       period: 'Mar 2024 – Jul 2024',
       color: 'blue',
       highlights: [
-        'Engineered 15+ geospatial features from 5K+ location records using spatial joins and distance-based aggregations, boosting downstream customer targeting model precision by 30% (0.61 to 0.79 precision@k), directly improving customer experience optimization.,
+        'Engineered 15+ geospatial features from 5K+ location records using spatial joins and distance-based aggregations, boosting downstream customer targeting model precision by 30% (0.61 to 0.79 precision@k), directly improving customer experience optimization.',
         'Conducted comprehensive EDA including outlier detection, missing-value imputation, and geo-cluster analysis, surfacing 3 high-value customer micro-segments previously invisible in raw data, adopted directly in GTM strategy.',
         'Integrated Google Maps API with a Flask backend to enrich customer profiles with real-time POI and footfall data, improving address-level geocoding accuracy by 20% and reducing lookup latency by 35%'
       ]
