@@ -369,7 +369,7 @@ export default function App() {
 
               {/* Resume */}
               <a
-                href="https://dhankarsimran.github.io/portfolio/Simran_Dhankar_Resume.pdf"
+                href="https://dhankarsimran.github.io/portfolio/Resume_Simran_Dhankar.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 px-8 py-4 rounded-full transition-all transform hover:scale-110 hover:shadow-lg hover:shadow-green-500/50"
@@ -681,7 +681,7 @@ export default function App() {
               simrandhankar3@gmail.com
             </a>
             <a 
-              href="https://dhankarsimran.github.io/portfolio/Simran_Dhankar_Resume.pdf"
+              href="https://dhankarsimran.github.io/portfolio/Resume_Simran_Dhankar.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 px-10 py-5 rounded-2xl transition-all transform hover:scale-110 text-lg shadow-lg hover:shadow-green-500/50"
