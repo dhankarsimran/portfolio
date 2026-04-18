@@ -135,7 +135,7 @@ export default function App() {
       ]
     },
     {
-      role: 'Software Development Intern',
+      role: 'Software Development Engineer Intern',
       company: 'ITMTB Technologies',
       location: 'Pune, India',
       period: 'Aug 2022 – Sep 2022',
