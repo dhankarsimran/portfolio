@@ -110,12 +110,13 @@ export default function App() {
   ];
   const experiences = [
     {
-      role: 'ML Engineer Intern',
+      role: 'IT Intern (Gen AI, ML & Full-stack)',
       company: 'Bajaj Capitals',
       location: 'Gurugram, India',
       period: 'Dec 2024 – Jun 2025',
       color: 'purple',
       highlights: [
+        'Built a full-stack MERN financial advisory platform (React.js, Node.js, Express.js, MongoDB) integrating OpenAI API for LLM-powered investment insights, serving 10K+ users with 99.9% uptime.',
         'Architected an end-to-end financial analytics ML pipeline ingesting 50K+ transaction records daily, applying feature engineering and unsupervised anomaly detection to lift structured data quality from 72% to 94%, directly reducing downstream model errors.',
         'Built a regression-based retirement forecasting model incorporating 20+ behavioral and financial features, reducing RMSE by 18% over baseline and improving long-range prediction stability for customer portfolio planning.',
         'Implemented k-fold cross-validation, residual error diagnostics, and SHAP-based feature attribution to harden model generalization, cutting overfitting gap from 11% to 4% on held-out validation sets.',
@@ -123,13 +124,14 @@ export default function App() {
       ]
     },
     {
-      role: 'Data Science Intern',
+      role: 'SDE Intern',
       company: 'Truminds Software Systems',
       location: 'Gurugram, India',
       period: 'Mar 2024 – Jul 2024',
       color: 'blue',
       highlights: [
         'Engineered 15+ geospatial features from 5K+ location records using spatial joins and distance-based aggregations, boosting downstream customer targeting model precision by 30% (0.61 to 0.79 precision@k), directly improving customer experience optimization.',
+        'Developed and shipped 5+ production features across a React.js + Node.js web platform, collaborating in Agile sprint cycles with daily standups and JIRA-tracked deliverables.',
         'Conducted comprehensive EDA including outlier detection, missing-value imputation, and geo-cluster analysis, surfacing 3 high-value customer micro-segments previously invisible in raw data, adopted directly in GTM strategy.',
         'Integrated Google Maps API with a Flask backend to enrich customer profiles with real-time POI and footfall data, improving address-level geocoding accuracy by 20% and reducing lookup latency by 35%'
       ]
